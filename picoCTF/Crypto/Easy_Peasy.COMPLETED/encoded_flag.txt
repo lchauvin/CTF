@@ -1,0 +1,5 @@
+******************Welcome to our OTP implementation!******************
+This is the encrypted flag!
+551e6c4c5e55644b56566d1b5100153d4004026a4b52066b4a5556383d4b0007
+
+What data would you like to encrypt? 
