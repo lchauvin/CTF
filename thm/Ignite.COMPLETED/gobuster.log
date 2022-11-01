@@ -1,0 +1,33 @@
+===============================================================
+Gobuster v3.2.0-dev
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.118.198
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.2.0-dev
+[+] Timeout:                 10s
+===============================================================
+2022/11/01 14:29:55 Starting gobuster in directory enumeration mode
+===============================================================
+[2K/index                (Status: 200) [Size: 16597]
+[2K/home                 (Status: 200) [Size: 16597]
+[2K/0                    (Status: 200) [Size: 16597]
+[2K/assets               (Status: 301) [Size: 315] [--> http://10.10.118.198/assets/]
+[2K/'                    (Status: 400) [Size: 1134]
+[2K/$FILE                (Status: 400) [Size: 1134]
+[2K/$file                (Status: 400) [Size: 1134]
+[2K/offline              (Status: 200) [Size: 70]
+[2K/*checkout*           (Status: 400) [Size: 1134]
+[2K/*docroot*            (Status: 400) [Size: 1134]
+[2K/*                    (Status: 400) [Size: 1134]
+[2K/$File                (Status: 400) [Size: 1134]
+[2K/!ut                  (Status: 400) [Size: 1134]
+[2K/search!default       (Status: 400) [Size: 1134]
+[2K/msgReader$1          (Status: 400) [Size: 1134]
+[2K/guestsettings!default (Status: 400) [Size: 1134]
+[2K/login!withRedirect   (Status: 400) [Size: 1134]
+[2K/$1                   (Status: 400) [Size: 1134]
+[2K/fuel                 (Status: 301) [Size: 313] [--> http://10.10.118.198/fuel/]

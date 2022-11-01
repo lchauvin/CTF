@@ -45,7 +45,7 @@ Nmap done: 1 IP address (1 host up) scanned in 23.47 seconds
 
 Gobuster scan
 ```
-gobuster dir -u http://$IP:8080 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt | tee gobuster.log
+gobuster dir -u http://$IP:8080 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt | tee gobuster.log 
 
 ===============================================================
 Gobuster v3.2.0-dev
@@ -59,12 +59,25 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 [+] User Agent:              gobuster/3.2.0-dev
 [+] Timeout:                 10s
 ===============================================================
-2022/11/01 00:56:57 Starting gobuster in directory enumeration mode
+2022/11/01 01:06:45 Starting gobuster in directory enumeration mode
 ===============================================================
 /docs                 (Status: 302) [Size: 0] [--> /docs/]
 /examples             (Status: 302) [Size: 0] [--> /examples/]
 /manager              (Status: 302) [Size: 0] [--> /manager/]
 /http%3A%2F%2Fwww     (Status: 400) [Size: 804]
+/http%3A%2F%2Fyoutube (Status: 400) [Size: 804]
+/http%3A%2F%2Fblogs   (Status: 400) [Size: 804]
+/http%3A%2F%2Fblog    (Status: 400) [Size: 804]
+/**http%3A%2F%2Fwww   (Status: 400) [Size: 804]
+/External%5CX-News    (Status: 400) [Size: 795]
+/http%3A%2F%2Fcommunity (Status: 400) [Size: 804]
+/http%3A%2F%2Fradar   (Status: 400) [Size: 804]
+/http%3A%2F%2Fjeremiahgrossman (Status: 400) [Size: 804]
+/http%3A%2F%2Fweblog  (Status: 400) [Size: 804]
+/http%3A%2F%2Fswik    (Status: 400) [Size: 804]
+Progress: 220535 / 220561 (99.99%)===============================================================
+2022/11/01 01:44:37 Finished
+===============================================================
 ```
 
 Nikto scan
