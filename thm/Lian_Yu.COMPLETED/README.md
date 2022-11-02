@@ -4,6 +4,8 @@ Laurent Chauvin | November 02, 2022
 
 ## Resources
 
+[1] https://gtfobins.github.io/
+
 ## Progress
 
 ```
