@@ -1,0 +1,20 @@
+===============================================================
+Gobuster v3.2.0-dev
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.221.171
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.2.0-dev
+[+] Extensions:              php,html,js,css
+[+] Timeout:                 10s
+===============================================================
+2022/11/05 02:05:22 Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.html                (Status: 403) [Size: 278]
+[2K/.php                 (Status: 403) [Size: 278]
+[2K/home.php             (Status: 200) [Size: 569]
+[2K/index.html           (Status: 200) [Size: 1466]
+[2K/validate.php         (Status: 200) [Size: 93]
