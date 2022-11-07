@@ -1,0 +1,18 @@
+===============================================================
+Gobuster v3.2.0-dev
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://mafialive.thm/development_testing/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.2.0-dev
+[+] Extensions:              js,php,cgi,html,css
+[+] Timeout:                 10s
+===============================================================
+2022/11/07 01:40:14 Starting gobuster in directory enumeration mode
+===============================================================
+===============================================================
+2022/11/07 01:45:22 Finished
+===============================================================

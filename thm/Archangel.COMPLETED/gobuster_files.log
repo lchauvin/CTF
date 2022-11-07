@@ -1,0 +1,36 @@
+===============================================================
+Gobuster v3.2.0-dev
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://mafialive.thm
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.2.0-dev
+[+] Extensions:              php,cgi,htm
+[+] Timeout:                 10s
+===============================================================
+2022/11/07 01:24:31 Starting gobuster in directory enumeration mode
+===============================================================
+[2K/.htm                 (Status: 403) [Size: 278]
+[2K/.php                 (Status: 403) [Size: 278]
+[2K/.hta                 (Status: 403) [Size: 278]
+[2K/.hta.htm             (Status: 403) [Size: 278]
+[2K/.hta.php             (Status: 403) [Size: 278]
+[2K/.hta.cgi             (Status: 403) [Size: 278]
+[2K/.htaccess            (Status: 403) [Size: 278]
+[2K/.htpasswd            (Status: 403) [Size: 278]
+[2K/.htaccess.cgi        (Status: 403) [Size: 278]
+[2K/.htaccess.htm        (Status: 403) [Size: 278]
+[2K/.htaccess.php        (Status: 403) [Size: 278]
+[2K/.htpasswd.cgi        (Status: 403) [Size: 278]
+[2K/.htpasswd.htm        (Status: 403) [Size: 278]
+[2K/.htpasswd.php        (Status: 403) [Size: 278]
+[2K/index.html           (Status: 200) [Size: 59]
+[2K/robots.txt           (Status: 200) [Size: 34]
+[2K/server-status        (Status: 403) [Size: 278]
+[2K/test.php             (Status: 200) [Size: 286]
+===============================================================
+2022/11/07 01:27:59 Finished
+===============================================================
