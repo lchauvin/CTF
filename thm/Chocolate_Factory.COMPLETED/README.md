@@ -807,7 +807,19 @@ When in ```vi``` use the command ```:!/bin/bash```
 We're are root !!! Let's get the flag
 
 This time, the flag is encrypter in a python script using Frenet.
-However, I couldn't manage to get it working on the remote host, so I downloaded it.
+However, I couldn't manage to get it working on the remote host, I was getting this error
+```
+Enter the key:  -VkgXhFf6sAEcAwrC6YR-SZbiuSb8ABXeQuvhcGSQzY=
+Traceback (most recent call last):
+  File "root.py", line 3, in <module>
+    key=input("Enter the key:  ")
+  File "<string>", line 1
+    -VkgXhFf6sAEcAwrC6YR-SZbiuSb8ABXeQuvhcGSQzY=
+                                               ^
+SyntaxError: unexpected EOF while parsing
+```
+
+So I downloaded it.
 
 I had to modify it like that to be able to get it working
 
