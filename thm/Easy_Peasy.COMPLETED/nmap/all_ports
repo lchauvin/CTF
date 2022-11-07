@@ -1,0 +1,12 @@
+# Nmap 7.92 scan initiated Sun Nov  6 22:34:33 2022 as: nmap -v -p- -oN nmap/all_ports 10.10.160.119
+Increasing send delay for 10.10.160.119 from 0 to 5 due to 64 out of 212 dropped probes since last increase.
+Nmap scan report for 10.10.160.119
+Host is up (0.11s latency).
+Not shown: 65532 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+80/tcp    open  http
+6498/tcp  open  unknown
+65524/tcp open  unknown
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sun Nov  6 22:56:04 2022 -- 1 IP address (1 host up) scanned in 1290.18 seconds
