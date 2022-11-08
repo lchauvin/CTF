@@ -1,22 +1,0 @@
-===============================================================
-Gobuster v3.2.0-dev
-by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://10.10.211.95
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.2.0-dev
-[+] Timeout:                 10s
-===============================================================
-2022/11/08 00:07:19 Starting gobuster in directory enumeration mode
-===============================================================
-[2K/wp-content           (Status: 301) [Size: 317] [--> http://10.10.211.95/wp-content/]
-[2K/wp-includes          (Status: 301) [Size: 318] [--> http://10.10.211.95/wp-includes/]
-[2K/wp-admin             (Status: 301) [Size: 315] [--> http://10.10.211.95/wp-admin/]
-[2K/hidden               (Status: 301) [Size: 313] [--> http://10.10.211.95/hidden/]
-[2K/server-status        (Status: 403) [Size: 277]
-===============================================================
-2022/11/08 00:48:15 Finished
-===============================================================
