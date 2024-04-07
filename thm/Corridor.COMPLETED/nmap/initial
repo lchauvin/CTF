@@ -1,0 +1,13 @@
+# Nmap 7.94SVN scan initiated Sun Apr  7 01:07:23 2024 as: nmap -sC -sV -oN nmap/initial 10.10.207.31
+Nmap scan report for 10.10.207.31
+Host is up (0.13s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE    VERSION
+222/tcp  filtered rsh-spx
+465/tcp  filtered smtps
+1064/tcp filtered jstel
+5432/tcp filtered postgresql
+5902/tcp filtered vnc-2
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr  7 01:07:49 2024 -- 1 IP address (1 host up) scanned in 26.57 seconds
